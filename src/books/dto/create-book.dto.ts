@@ -1,11 +1,10 @@
-import { IsNumber, IsOptional, IsString, MinLength } from "class-validator";
+import { IsInt, IsOptional, IsString, MinLength } from "class-validator";
 
 export class CreateBookDto {
 
-    @IsNumber()
-    @MinLength(2)
+    @IsInt()
     @IsOptional()
-    serie: string;
+    serie: number;
 
     @IsString()
     @MinLength(2)
