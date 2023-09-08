@@ -19,6 +19,7 @@ export class AuthService {
         const payload = {
             userId: user.userId, username: user.username,
             expiresAt: moment().add('1', 'h').format('YYYY-MM-DD HH:mm'),
+            initialAt: moment().format('YYYY-MM-DD HH:mm')
         };
         return {
             access_token: await this.jwtService.signAsync(payload),
