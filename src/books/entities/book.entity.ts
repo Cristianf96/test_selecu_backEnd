@@ -7,6 +7,9 @@ export class Book {
     id: number;
 
     @Column()
+    serie: string;
+
+    @Column()
     title: string;
 
     @Column()
@@ -17,9 +20,6 @@ export class Book {
 
     @Column({ type: 'longtext' })
     synopsis: string;
-
-    @Column()
-    cover: string;
 
     @DeleteDateColumn()
     deletedAt: Date;
