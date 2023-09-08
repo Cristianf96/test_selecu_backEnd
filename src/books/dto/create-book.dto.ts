@@ -4,11 +4,16 @@ export class CreateBookDto {
 
     @IsNumber()
     @MinLength(2)
+    @IsOptional()
     serie: string;
 
     @IsString()
     @MinLength(2)
     title: string;
+
+    @IsString()
+    @MinLength(2)
+    publisher: string;
 
     @IsString()
     @MinLength(2)
